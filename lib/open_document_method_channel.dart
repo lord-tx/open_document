@@ -57,7 +57,6 @@ class MethodChannelOpenDocument extends OpenDocumentPlatform {
         return await methodChannel.invokeMethod("openDocument", filePath);
     } on PlatformException catch (e) {
       throw OpenDocumentException('openDocument: ${e.message}');
-      throw OpenDocumentException('openDocument: ${e.toString()}');
     }
   }
 
