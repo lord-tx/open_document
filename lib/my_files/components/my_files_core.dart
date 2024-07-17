@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../init.dart';
+import 'package:open_document/my_files/init.dart';
 
 class MyFilesCore extends StatelessWidget {
   final ControllerMayFiles controllerMayFiles;
