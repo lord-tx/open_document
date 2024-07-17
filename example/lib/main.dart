@@ -1,6 +1,3 @@
-import 'dart:async';
-import 'dart:io';
-
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:open_document/my_files/init.dart';
@@ -8,7 +5,7 @@ import 'package:open_document/open_document.dart';
 import 'package:open_document/open_document_exception.dart';
 import 'package:open_document_example/permission_service.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:wakelock/wakelock.dart';
+//import 'package:wakelock/wakelock.dart';
 
 void main() {
   runApp(MaterialApp(home: MyApp()));
@@ -24,10 +21,9 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
-    Wakelock.enable();
+    // Wakelock.enable();
     super.initState();
-    if(!Platform.isMacOS)
-    initCheckPermission();
+    if (!Platform.isMacOS) initCheckPermission();
 
     initPlatformState();
   }
@@ -45,9 +41,10 @@ class _MyAppState extends State<MyApp> {
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
     String filePath;
-
     final url =
-        "https://filesamples.com/samples/document/pdf/sample3.pdf";
+        "https://fase.org.br/wp-content/uploads/2014/05/exemplo-de-pdf.pdf";
+    // "https://filesamples.com/samples/document/pdf/sample3.pdf";
+    //final url = "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-zip-file.zip";
     //
     // Platform messages may fail, so we use a try/catch PlatformException.
     //"https://file-examples-com.github.io/uploads/2017/02/file_example_XLS_5000.xls";
@@ -56,7 +53,8 @@ class _MyAppState extends State<MyApp> {
 
     final name = await OpenDocument.getNameFile(url: url);
 
-    final path = await OpenDocument.getPathDocument(folderName: "open_document_example");
+    final path = await OpenDocument.getPathDocument();
+
     filePath = "$path/$name";
 
     final isCheck = await OpenDocument.checkDocument(filePath: filePath);
@@ -70,7 +68,6 @@ class _MyAppState extends State<MyApp> {
     var result =  await OpenDocument.openDocument(
         filePath: filePath,
       );
-
     } on OpenDocumentException catch (e) {
       debugPrint("ERROR: ${e.errorMessage}");
       filePath = 'Failed to get platform version.';
@@ -119,7 +116,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   _pushScreen() async {
-    String name = await OpenDocument.getNameFolder(widowsFolder: "Julia");
+    String name = await OpenDocument.getNameFolder();
 
     Navigator.of(context).push(
       MaterialPageRoute(

@@ -11,7 +11,7 @@
   
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
   
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
@@ -21,13 +21,12 @@
 </head>
 
 
-<body data-base-href="../"
-      data-using-base-href="false">
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
 
 <div id="overlay-under-drawer"></div>
 
 <header id="title">
-  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">open_document</a></li>
     <li><a href="../my_files_components_my_files_core/my_files_components_my_files_core-library.html">my_files_core</a></li>
@@ -37,15 +36,23 @@
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
 </header>
-
 <main>
-
 
   <div id="dartdoc-main-content" class="main-content">
       <div>
 <h1><span class="kind-class">MyFilesCore</span> class 
-    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
  
 </h1></div>
 
@@ -72,6 +79,8 @@
 
 
         
+
+
       </dl>
     </section>
 
@@ -81,7 +90,7 @@
 
     <dl class="constructor-summary-list">
         <dt id="MyFilesCore" class="callable">
-          <span class="name"><a href="../my_files_components_my_files_core/MyFilesCore/MyFilesCore.html">MyFilesCore</a></span><span class="signature">(<span class="parameter" id="-param-key">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-widgets"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/widgets/Widget-class.html">Widget</a></span>&gt;</span></span> <span class="parameter-name">widgets</span>, </span><span class="parameter" id="-param-lastPaths"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">lastPaths</span>, </span><span class="parameter" id="-param-scrollController"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/widgets/ScrollController-class.html">ScrollController</a></span> <span class="parameter-name">scrollController</span>, </span><span class="parameter" id="-param-isShare"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isShare</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-onClick"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Function-class.html">Function</a></span> <span class="parameter-name">onClick</span>}</span>)</span>
+          <span class="name"><a href="../my_files_components_my_files_core/MyFilesCore/MyFilesCore.html">MyFilesCore</a></span><span class="signature">(<span class="parameter" id="-param-key">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-widgets"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/widgets/Widget-class.html">Widget</a></span>&gt;</span></span> <span class="parameter-name">widgets</span>, </span><span class="parameter" id="-param-controllerMayFiles"><span>required</span> <span class="type-annotation"><a href="../my_files_controller_my_files/ControllerMayFiles-class.html">ControllerMayFiles</a></span> <span class="parameter-name">controllerMayFiles</span>}</span>)</span>
         </dt>
         <dd>
           
@@ -94,6 +103,17 @@
       <h2>Properties</h2>
 
       <dl class="properties">
+        <dt id="controllerMayFiles" class="property">
+  <span class="name"><a href="../my_files_components_my_files_core/MyFilesCore/controllerMayFiles.html">controllerMayFiles</a></span>
+  <span class="signature">&#8594; <a href="../my_files_controller_my_files/ControllerMayFiles-class.html">ControllerMayFiles</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
         <dt id="hashCode" class="property inherited">
   <span class="name"><a href="https://api.flutter.dev/flutter/widgets/Widget/hashCode.html">hashCode</a></span>
   <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> 
@@ -101,18 +121,7 @@
 </dt>
 <dd class="inherited">
   The hash code for this object.
-  <div class="features">@<a href="https://pub.dev/documentation/meta/1.7.0/meta/nonVirtual-constant.html">nonVirtual</a>, read-only, inherited</div>
-
-</dd>
-
-        <dt id="isShare" class="property">
-  <span class="name"><a href="../my_files_components_my_files_core/MyFilesCore/isShare.html">isShare</a></span>
-  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> 
-
-</dt>
-<dd>
-  
-  <div class="features">final</div>
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
 
 </dd>
 
@@ -123,29 +132,7 @@
 </dt>
 <dd class="inherited">
   Controls how one widget replaces another widget in the tree.
-  <div class="features">final, inherited</div>
-
-</dd>
-
-        <dt id="lastPaths" class="property">
-  <span class="name"><a href="../my_files_components_my_files_core/MyFilesCore/lastPaths.html">lastPaths</a></span>
-  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> 
-
-</dt>
-<dd>
-  
-  <div class="features">final</div>
-
-</dd>
-
-        <dt id="onClick" class="property">
-  <span class="name"><a href="../my_files_components_my_files_core/MyFilesCore/onClick.html">onClick</a></span>
-  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Function-class.html">Function</a></span> 
-
-</dt>
-<dd>
-  
-  <div class="features">final</div>
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
 
 </dd>
 
@@ -156,18 +143,7 @@
 </dt>
 <dd class="inherited">
   A representation of the runtime type of the object.
-  <div class="features">read-only, inherited</div>
-
-</dd>
-
-        <dt id="scrollController" class="property">
-  <span class="name"><a href="../my_files_components_my_files_core/MyFilesCore/scrollController.html">scrollController</a></span>
-  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/widgets/ScrollController-class.html">ScrollController</a></span> 
-
-</dt>
-<dd>
-  
-  <div class="features">final</div>
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
 
 </dd>
 
@@ -178,7 +154,7 @@
 </dt>
 <dd>
   
-  <div class="features">final</div>
+  <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
@@ -200,7 +176,7 @@
 </dt>
 <dd>
   Describes the part of the user interface represented by this widget.
-  <div class="features">override</div>
+  <div class="features"><span class="feature">override</span></div>
 
 </dd>
 
@@ -239,7 +215,7 @@
 </dt>
 <dd class="inherited">
   Creates a <a href="https://api.flutter.dev/flutter/widgets/StatelessElement-class.html">StatelessElement</a> to manage this widget's location in the tree.
-  <div class="features">inherited</div>
+  <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
@@ -253,7 +229,7 @@
 <dd class="inherited">
   Returns a list of <code>DiagnosticsNode</code> objects describing this node's
 children.
-  <div class="features">@<a href="https://pub.dev/documentation/meta/1.7.0/meta/protected-constant.html">protected</a>, inherited</div>
+  <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
@@ -266,7 +242,7 @@ children.
 </dt>
 <dd class="inherited">
   Add additional properties associated with the node.
-  <div class="features">inherited</div>
+  <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
@@ -278,8 +254,8 @@ children.
 
 </dt>
 <dd class="inherited">
-  Invoked when a non-existent method or property is accessed.
-  <div class="features">inherited</div>
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
@@ -293,7 +269,7 @@ children.
 <dd class="inherited">
   Returns a debug representation of the object that is used by debugging
 tools and by <a href="https://api.flutter.dev/flutter/foundation/DiagnosticsNode/toStringDeep.html">DiagnosticsNode.toStringDeep</a>.
-  <div class="features">inherited</div>
+  <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
@@ -306,7 +282,7 @@ tools and by <a href="https://api.flutter.dev/flutter/foundation/DiagnosticsNode
 </dt>
 <dd class="inherited">
   A string representation of this object.
-  <div class="features">inherited</div>
+  <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
@@ -319,7 +295,7 @@ tools and by <a href="https://api.flutter.dev/flutter/foundation/DiagnosticsNode
 </dt>
 <dd class="inherited">
   Returns a string representation of this node and its descendants.
-  <div class="features">inherited</div>
+  <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
@@ -332,7 +308,7 @@ tools and by <a href="https://api.flutter.dev/flutter/foundation/DiagnosticsNode
 </dt>
 <dd class="inherited">
   Returns a one-line detailed description of the object.
-  <div class="features">inherited</div>
+  <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
@@ -345,7 +321,7 @@ tools and by <a href="https://api.flutter.dev/flutter/foundation/DiagnosticsNode
 </dt>
 <dd class="inherited">
   A short, textual description of this widget.
-  <div class="features">inherited</div>
+  <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
@@ -366,7 +342,7 @@ tools and by <a href="https://api.flutter.dev/flutter/foundation/DiagnosticsNode
 </dt>
 <dd class="inherited">
   The equality operator.
-  <div class="features">@<a href="https://pub.dev/documentation/meta/1.7.0/meta/nonVirtual-constant.html">nonVirtual</a>, inherited</div>
+  <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
@@ -395,8 +371,8 @@ tools and by <a href="https://api.flutter.dev/flutter/foundation/DiagnosticsNode
 
     <h5>my_files_core library</h5>
     <ol>
-  <li class="section-title"><a href="../my_files_components_my_files_core/my_files_components_my_files_core-library.html#classes">Classes</a></li>
-  <li><a href="../my_files_components_my_files_core/MyFilesCore-class.html">MyFilesCore</a></li>
+      <li class="section-title"><a href="../my_files_components_my_files_core/my_files_components_my_files_core-library.html#classes">Classes</a></li>
+        <li><a href="../my_files_components_my_files_core/MyFilesCore-class.html">MyFilesCore</a></li>
 
 
 
@@ -416,34 +392,31 @@ tools and by <a href="https://api.flutter.dev/flutter/foundation/DiagnosticsNode
           <li><a href="../my_files_components_my_files_core/MyFilesCore/MyFilesCore.html">MyFilesCore</a></li>
 
 
-    <li class="section-title">
-      <a href="../my_files_components_my_files_core/MyFilesCore-class.html#instance-properties">Properties</a>
-    </li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/widgets/Widget/hashCode.html">hashCode</a></li>
-    <li><a href="../my_files_components_my_files_core/MyFilesCore/isShare.html">isShare</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/widgets/Widget/key.html">key</a></li>
-    <li><a href="../my_files_components_my_files_core/MyFilesCore/lastPaths.html">lastPaths</a></li>
-    <li><a href="../my_files_components_my_files_core/MyFilesCore/onClick.html">onClick</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></li>
-    <li><a href="../my_files_components_my_files_core/MyFilesCore/scrollController.html">scrollController</a></li>
-    <li><a href="../my_files_components_my_files_core/MyFilesCore/widgets.html">widgets</a></li>
+        <li class="section-title">
+          <a href="../my_files_components_my_files_core/MyFilesCore-class.html#instance-properties">Properties</a>
+        </li>
+          <li><a href="../my_files_components_my_files_core/MyFilesCore/controllerMayFiles.html">controllerMayFiles</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/widgets/Widget/hashCode.html">hashCode</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/widgets/Widget/key.html">key</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></li>
+          <li><a href="../my_files_components_my_files_core/MyFilesCore/widgets.html">widgets</a></li>
 
-    <li class="section-title"><a href="../my_files_components_my_files_core/MyFilesCore-class.html#instance-methods">Methods</a></li>
-    <li><a href="../my_files_components_my_files_core/MyFilesCore/build.html">build</a></li>
-    <li><a href="../my_files_components_my_files_core/MyFilesCore/buildBodyList.html">buildBodyList</a></li>
-    <li><a href="../my_files_components_my_files_core/MyFilesCore/buildHeader.html">buildHeader</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/widgets/StatelessWidget/createElement.html">createElement</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/foundation/DiagnosticableTree/debugDescribeChildren.html">debugDescribeChildren</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/widgets/Widget/debugFillProperties.html">debugFillProperties</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/foundation/DiagnosticableTree/toDiagnosticsNode.html">toDiagnosticsNode</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/foundation/Diagnosticable/toString.html">toString</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/foundation/DiagnosticableTree/toStringDeep.html">toStringDeep</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/foundation/DiagnosticableTree/toStringShallow.html">toStringShallow</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/widgets/Widget/toStringShort.html">toStringShort</a></li>
+        <li class="section-title"><a href="../my_files_components_my_files_core/MyFilesCore-class.html#instance-methods">Methods</a></li>
+          <li><a href="../my_files_components_my_files_core/MyFilesCore/build.html">build</a></li>
+          <li><a href="../my_files_components_my_files_core/MyFilesCore/buildBodyList.html">buildBodyList</a></li>
+          <li><a href="../my_files_components_my_files_core/MyFilesCore/buildHeader.html">buildHeader</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/widgets/StatelessWidget/createElement.html">createElement</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/foundation/DiagnosticableTree/debugDescribeChildren.html">debugDescribeChildren</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/widgets/Widget/debugFillProperties.html">debugFillProperties</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/foundation/DiagnosticableTree/toDiagnosticsNode.html">toDiagnosticsNode</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/foundation/Diagnosticable/toString.html">toString</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/foundation/DiagnosticableTree/toStringDeep.html">toStringDeep</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/foundation/DiagnosticableTree/toStringShallow.html">toStringShallow</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/widgets/Widget/toStringShort.html">toStringShort</a></li>
 
-    <li class="section-title inherited"><a href="../my_files_components_my_files_core/MyFilesCore-class.html#operators">Operators</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/widgets/Widget/operator_equals.html">operator ==</a></li>
+        <li class="section-title inherited"><a href="../my_files_components_my_files_core/MyFilesCore-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/widgets/Widget/operator_equals.html">operator ==</a></li>
 
 
 
@@ -457,7 +430,7 @@ tools and by <a href="https://api.flutter.dev/flutter/foundation/DiagnosticsNode
 <footer>
   <span class="no-break">
     open_document
-      1.0.4
+      1.0.6+3
   </span>
 
   
@@ -466,7 +439,7 @@ tools and by <a href="https://api.flutter.dev/flutter/foundation/DiagnosticsNode
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
-<script src="../static-assets/script.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
 
 
 
