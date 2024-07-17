@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter/services.dart';
+import 'package:open_document/my_files/components/slidable_my_file_item.dart';
+import 'package:open_document/open_document.dart';
+import 'package:share_plus/share_plus.dart';
 import 'init.dart';
 
 /// Created to show your files inside local folder
